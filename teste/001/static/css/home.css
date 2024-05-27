@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+body {
+  background-image: url("../css/imagem/fundo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#form_fundo {
+  background-color: rgba(86, 86, 86, 0.505);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 370px;
+  height: 400px;
+}
+
+#form_fundo h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: rgba(255, 140, 0, 0.797);
+}
+
+#form_frente {
+  width: 100%;
+}
+
+#form_frente label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: rgba(255, 140, 0, 0.671);
+}
+
+#form_frente input[type="text"],
+#form_frente input[type="password"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid lightslategray;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: rgba(255, 140, 0, 0.744);
+}
+
+#form_frente button {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: rgba(255, 140, 0, 0.598);
+  color: rgba(0, 0, 139, 0.71);
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#form_frente button span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: darkorange;
+  border-radius: 5px;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in-out;
+}
+
+#form_frente button span:nth-child(1) {
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+  top: 0;
+  left: 0;
+}
+
+#form_frente button span:nth-child(2) {
+  height: 100%;
+  width: 2px;
+  background-color: #000000;
+  left: 0;
+  top: 0;
+}
+
+#form_frente button span:nth-child(3) {
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  left: 0;
+  bottom: 0;
+}
+
+#form_frente button span:nth-child(4) {
+  width: 2px;
+  height: 100%;
+  background-color: #fff;
+  top: 0;
+  right: 0;
+}
+
+#form_frente button:hover span:nth-child(1) {
+  transform: translateX(0);
+}
+
+#form_frente button:hover span:nth-child(2) {
+  transform: translateY(0);
+}
+
+#form_frente button:hover span:nth-child(3) {
+  transform: translateX(100%);
+}
+
+#form_frente button:hover span:nth-child(4) {
+  transform: translateY(100%);
+}
+
+.flash_alerta {
+display: flex;
+align-items: center;
+background-color: #fffb00;
+color: #000000ae;
+padding: 5px;
+border-left: 6px solid #ffd500;
+margin-bottom: 10px;
+border-radius: 5px;
+max-width: 450px; 
+width: 200px; 
+box-sizing: border-box;
+font-size: 14px;
+}
+
+.material-icons {
+margin-right: 10px;
+font-size: 20px; 
+} 

@@ -1,0 +1,55 @@
+{% extends 'usuarios/base.html' %}
+{% block conteudo %}
+<style>
+.navbar {
+    background-color: #222739;
+    color: darkorange;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5em;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+  }
+</style>
+<main>
+    <section class="container">
+      <h1>Cadastro de Usuários</h1>
+      <form action="{% url 'listagem_usuarios' %}" method="post">
+        {% csrf_token %}
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome"><br><br>
+        <label for="sobrenome">Sobrenome:</label>
+        <input type="text" id="sobrenome" name="sobrenome"><br><br>
+        <label for="data">Data:</label>
+        <input type="text" id="data" name="data"><br><br>
+        <label for="fone">Fone:</label>
+        <input type="text" id="fone" name="fone"><br><br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"><br><br>
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf"><br><br>
+        <button class="form-control-sm">Concluir</button>
+      </form>
+    </section>
+</main>
+{% endblock %}

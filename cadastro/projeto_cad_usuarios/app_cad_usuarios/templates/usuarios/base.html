@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadastro</title>
+  <style>
+  .navbar {
+    background-color: #333952;
+    color: darkorange;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5em;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <span class="navbar-brand"><a style="text-decoration: none;" href="{% url 'home' %}">CADASTRO</a></span>
+      </div>
+    </nav>
+  </header>
+  {% block conteudo %}
+  
+  {% endblock %}
+
+    </body>

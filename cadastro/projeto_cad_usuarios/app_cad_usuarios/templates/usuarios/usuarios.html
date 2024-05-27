@@ -1,0 +1,47 @@
+{% extends 'usuarios/base.html' %}
+{% block conteudo %}
+<style>
+    .table {
+      border: 1px solid #ddd;
+      width: 100%;
+    }
+
+    .table th {
+      background-color: #f2f2f2;
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    .table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+  </style>
+    <div class="container">
+        <h1>usuarios Cadastrados</h1>
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th>id</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Data</th>
+                <th>Fone</th>
+                <th>Email</th>
+                <th>CPF</th>
+            </tr>
+            {% for usuario in usuarios %}
+            <tr>
+                <td>{{usuario.id}}</td>
+                <td>{{usuario.nome}}</td>
+                <td>{{usuario.sobrenome}}</td>
+                <td>{{usuario.data}}</td>
+                <td>{{usuario.fone}}</td>
+                <td>{{usuario.emai}}</td>
+                <td>{{usuario.cpf}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}
